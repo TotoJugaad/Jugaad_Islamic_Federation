@@ -1,0 +1,123 @@
+body {
+	font-family: Lucida Console, sans-serif;
+}
+h1 {
+	text-align: center;
+	line-height: 0.8;
+	font-size: 64px;
+	font-family: Courier New;
+}
+h1 span.small {
+	font-size: 36px; /* 小さくする */
+}
+h2 {
+	text-align: center;
+	font-size: 48px;
+	line-height: 0.8;
+}
+p {
+	text-align: center;
+}
+p span.big {
+	font-size: 20px;
+}
+.full-width-line {
+	border: none; /* デフォルトの線を消す */
+	border-top: 2px solid #333; /* 上線だけ表示 */
+	margin: 0; /* 上下余白を調整したい場合は変更 */
+}
+details {
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	padding: 0.5em 0.5em 0;
+	margin-bottom: 0.5em; /* 内側との間に余白 */
+}
+
+summary {
+	font-weight: bold;
+	font-size: 20px;
+	margin: -0.5em -0.5em 0;
+	padding: 0.5em;
+	cursor: pointer;
+}
+
+/*details[open] {
+	padding: 0.5em;
+}*/
+
+details[open] summary {
+	border-bottom: 1px solid #aaa;
+	margin-bottom: 0.5em;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+li::before {
+	content: "一、"; /* 強制的に前に「一、」を付ける */
+	margin-right: 4px;
+}
+.button-bar {
+	display: flex;
+	justify-content: center;
+	gap: 0;
+	font-family: Lucida Console, sans-serif;
+	margin-top: 0px;
+}
+
+.button-bar button {
+	font-family: Lucida Console, sans-serif;
+	font-size: 24px;
+	padding: 10px 20px;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+	border-bottom: 2px solid transparent; /* 通常は透明な下線 */
+	transition: background-color 0.3s, border-bottom-color 0.3s;
+	border-radius: 0;
+}
+
+.button-bar button:hover {
+	background-color: #eee; /* ホバーでグレー */
+	border-bottom-color: #ff2200; /* 下線表示 */
+}
+.button-bar button.active {
+	background-color: #eee; /* ホバーでグレー */
+	border-bottom-color: #ff2200;
+}
+.lang-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .lang-btn {
+      background: #444;
+      color: black;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .lang-menu {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 120px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+    .lang-menu button {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 10px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .lang-menu button:hover {
+      background: #eee;
+    }
+    .lang-dropdown:hover .lang-menu {
+      display: block;
+    }
